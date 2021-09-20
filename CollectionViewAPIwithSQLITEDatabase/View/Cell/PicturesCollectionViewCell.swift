@@ -18,14 +18,14 @@ class PicturesCollectionViewCell: UICollectionViewCell {
     }
     
     
-    func  condfigration(urldata: Elementtt) {
-        viewModel.dataImage(st: urldata.url, images: self)
+   // func  condfigration(urldata: Elementtt) {
+   //     viewModel.dataImage(st: urldata.url, images: self)
 //        DownloadImage.imageDowloag(string: urldata.url) {[weak self] data in
 //            let img = UIImage(data: data)
 //            DispatchQueue.main.async {
 //                self?.collectionimage.image = img
 //            }
 //        }
-    }
+ //   }
 
 }

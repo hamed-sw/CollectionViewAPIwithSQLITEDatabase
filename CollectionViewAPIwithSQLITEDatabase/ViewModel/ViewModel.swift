@@ -9,29 +9,12 @@ import UIKit
 
 class ViewModel {
     
-     var collectionArry = [Elementtt]()
     var collectionView: UICollectionView?
     
-    func apiCall() {
-        jsonParsing.parsing { [weak self] data in
-            switch data {
-            case.success(let theData):
-                for datas in theData {
-                    if datas.mediaType == Constants.image {
-                        self?.collectionArry.append(Elementtt(date: datas.date ?? "", explanation: datas.explanation ?? "", mediaType: datas.mediaType ?? "", url: datas.url ?? ""))
-                    }
-                    DispatchQueue.main.async {
-                        self?.collectionView?.reloadData()
-                    }
-                }
-            case.failure(let error):
-                print(error)
-            }
-        }
-    }
     
-    func dataImage(st: String, images: PicturesCollectionViewCell) {
-        DownloadImage.imageDowloag(string: st ) { data in
+    func dataImage(indext: Int, images: PicturesCollectionViewCell) {
+        let urldata = SqliteStatments.presentRow().object(at: indext)?.url ?? ""
+        DownloadImage.imageDowloag(string: urldata ) { data in
             guard let imag = UIImage(data: data) else {return}
             DispatchQueue.main.async {
                 images.collectionimage.image = imag
@@ -43,6 +26,11 @@ class ViewModel {
     func detailData(st: String, dataOf: DetailsViewController) {
         
         
+    }
+    
+    func totaldataOFDatabase() -> Int? {
+        let total = SqliteStatments.presentRow().count
+        return total 
     }
     
     
