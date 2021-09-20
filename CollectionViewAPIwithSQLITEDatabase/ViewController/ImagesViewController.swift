@@ -50,9 +50,7 @@ extension ImagesViewController:UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.PicturesCollectionViewCell, for: indexPath) as? PicturesCollectionViewCell else { fatalError() }
-       // let theurlStirng = viewModel.collectionArry[indexPath.row]
-       // print(viewModel.collectionArry.count)
-       // cell.condfigration(urldata: theurlStirng)
+
         viewModel.dataImage(indext: indexPath.row, images: cell.self)
         
         return cell
@@ -62,14 +60,13 @@ extension ImagesViewController:UICollectionViewDelegate, UICollectionViewDataSou
         return CGSize(width: 200, height: 200)
     }
     
-//        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//            if let details = storyboard?.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController {
-//                let theElement = viewModel.collectionArry[indexPath.row]
-//                details.config(elem: theElement)
-//                self.navigationController?.pushViewController(details, animated: true)
-//            }
-//
-//        }
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            if let details = storyboard?.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController {
+                viewModel.detailData(indext: indexPath.row, dataOf: details.self)
+                self.navigationController?.pushViewController(details, animated: true)
+            }
+
+        }
     
     
 }

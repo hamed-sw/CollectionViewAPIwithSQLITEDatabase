@@ -28,17 +28,6 @@ class DetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func config(elem: Elementtt) {
-        forDetailDate = elem.date
-        forDetaillabel = elem.explanation
-        DownloadImage.imageDowloag(string: elem.url) { [weak self] data in
-            let image = UIImage(data: data)
-            DispatchQueue.main.async {
-                self?.forImage = image
-            }
-        }
-        
-    }
     
 
 
