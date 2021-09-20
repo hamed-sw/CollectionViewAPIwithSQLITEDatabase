@@ -23,7 +23,17 @@ class ViewModel {
         }
     }
     
-    func detailData(st: String, dataOf: DetailsViewController) {
+    func detailData(indext: Int, dataOf: DetailsViewController) {
+        dataOf.forDetailDate = SqliteStatments.presentRow().object(at: indext)?.date
+        dataOf.forDetaillabel = SqliteStatments.presentRow().object(at: indext)?.explanation
+        let  urlData = SqliteStatments.presentRow().object(at: indext)?.url ?? ""
+        DownloadImage.imageDowloag(string: urlData) { data in
+            guard let imag = UIImage(data: data) else {return}
+            DispatchQueue.main.async {
+                dataOf.forImage = imag
+            }
+
+        }
         
         
     }

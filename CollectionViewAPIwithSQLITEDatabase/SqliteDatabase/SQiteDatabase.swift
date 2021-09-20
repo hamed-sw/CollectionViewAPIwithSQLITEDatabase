@@ -11,7 +11,7 @@ import SQLite
 class SqliteStatments {
    static var collectionView: UICollectionView?
     
-   static var table = Table("PctureList1")
+   static var table = Table("PctureList2")
     static var isEmpty = false
    // var presentDataArray =
     
