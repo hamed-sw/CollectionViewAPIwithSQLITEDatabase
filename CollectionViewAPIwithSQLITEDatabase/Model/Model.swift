@@ -8,10 +8,10 @@
 import Foundation
 
 struct APINetwork: Codable {
-    let date: String?
-    let explanation: String?
-    var mediaType: String?
-    let url: String?
+    let date: String
+    let explanation: String
+    var mediaType: String
+    let url: String
     
     enum CodingKeys: String, CodingKey {
         case date

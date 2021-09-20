@@ -19,13 +19,25 @@ class ImagesViewController: UIViewController {
         registerCell()
         collectionView.delegate = self
         collectionView.dataSource = self
-        viewModel.collectionView = self.collectionView
-        viewModel.apiCall()
+      //  updatedatabase()
+        //viewModel.apiCall()
+        updatedatabase()
 
     }
     
     func  registerCell() {
         collectionView.register(UINib(nibName: Constants.PicturesCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.PicturesCollectionViewCell)
+    }
+    
+    func updatedatabase() {
+        SQLiteDatabase.share.createtables()
+        SqliteStatments.collectionView = self.collectionView
+        SqliteStatments.insertData()
+        SqliteStatments.presentRow()
+        print(SqliteStatments.presentRow().count)
+        
+        collectionView.reloadData()
+        
     }
 
 
@@ -33,14 +45,16 @@ class ImagesViewController: UIViewController {
 
 extension ImagesViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.collectionArry.count
+        return viewModel.totaldataOFDatabase() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.PicturesCollectionViewCell, for: indexPath) as? PicturesCollectionViewCell else { fatalError() }
-        let theurlStirng = viewModel.collectionArry[indexPath.row]
-        print(viewModel.collectionArry.count)
-        cell.condfigration(urldata: theurlStirng)
+       // let theurlStirng = viewModel.collectionArry[indexPath.row]
+       // print(viewModel.collectionArry.count)
+       // cell.condfigration(urldata: theurlStirng)
+        viewModel.dataImage(indext: indexPath.row, images: cell.self)
+        
         return cell
     }
     
@@ -48,14 +62,14 @@ extension ImagesViewController:UICollectionViewDelegate, UICollectionViewDataSou
         return CGSize(width: 200, height: 200)
     }
     
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            if let details = storyboard?.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController {
-                let theElement = viewModel.collectionArry[indexPath.row]
-                details.config(elem: theElement)
-                self.navigationController?.pushViewController(details, animated: true)
-            }
-    
-        }
+//        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//            if let details = storyboard?.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController {
+//                let theElement = viewModel.collectionArry[indexPath.row]
+//                details.config(elem: theElement)
+//                self.navigationController?.pushViewController(details, animated: true)
+//            }
+//
+//        }
     
     
 }

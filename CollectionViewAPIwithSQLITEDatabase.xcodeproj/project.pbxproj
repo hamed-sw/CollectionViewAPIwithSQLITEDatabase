@@ -24,6 +24,8 @@
 		FAB99C6F26F85DC40085F0AB /* PicturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C6D26F85DC40085F0AB /* PicturesCollectionViewCell.swift */; };
 		FAB99C7026F85DC40085F0AB /* PicturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB99C6E26F85DC40085F0AB /* PicturesCollectionViewCell.xib */; };
 		FAB99C7526F878CA0085F0AB /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = FAB99C7426F878CA0085F0AB /* SQLite */; };
+		FAB99C7726F87B900085F0AB /* SqilteConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C7626F87B8F0085F0AB /* SqilteConnection.swift */; };
+		FAB99C7926F88D450085F0AB /* ArrayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C7826F88D450085F0AB /* ArrayExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		FAB99C6D26F85DC40085F0AB /* PicturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAB99C6E26F85DC40085F0AB /* PicturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicturesCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAB99C7226F877990085F0AB /* SQLite.swift-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SQLite.swift-master"; path = "../../Downloads/SQLite.swift-master"; sourceTree = "<group>"; };
+		FAB99C7626F87B8F0085F0AB /* SqilteConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqilteConnection.swift; sourceTree = "<group>"; };
+		FAB99C7826F88D450085F0AB /* ArrayExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB99C6B26F85DA40085F0AB /* Constants.swift */,
+				FAB99C7826F88D450085F0AB /* ArrayExtention.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 		FAB99C5A26F85CC00085F0AB /* SqliteDatabase */ = {
 			isa = PBXGroup;
 			children = (
+				FAB99C7626F87B8F0085F0AB /* SqilteConnection.swift */,
 				FAB99C5B26F85CFF0085F0AB /* SQiteDatabase.swift */,
 			);
 			path = SqliteDatabase;
@@ -252,12 +258,14 @@
 				FAB99C6F26F85DC40085F0AB /* PicturesCollectionViewCell.swift in Sources */,
 				FAB99C4126F85C670085F0AB /* AppDelegate.swift in Sources */,
 				FAB99C4326F85C670085F0AB /* SceneDelegate.swift in Sources */,
+				FAB99C7726F87B900085F0AB /* SqilteConnection.swift in Sources */,
 				FAB99C6A26F85D950085F0AB /* DownloadImages.swift in Sources */,
 				FAB99C5C26F85CFF0085F0AB /* SQiteDatabase.swift in Sources */,
 				FAB99C5E26F85D0C0085F0AB /* Model.swift in Sources */,
 				FAB99C6226F85D520085F0AB /* DetailsViewController.swift in Sources */,
 				FAB99C6826F85D850085F0AB /* JsonParsing.swift in Sources */,
 				FAB99C6426F85D620085F0AB /* ViewModel.swift in Sources */,
+				FAB99C7926F88D450085F0AB /* ArrayExtention.swift in Sources */,
 				FAB99C6626F85D710085F0AB /* ElementViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
