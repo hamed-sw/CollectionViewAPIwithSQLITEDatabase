@@ -3,27 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FAB99C4126F85C670085F0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C4026F85C670085F0AB /* AppDelegate.swift */; };
 		FAB99C4326F85C670085F0AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C4226F85C670085F0AB /* SceneDelegate.swift */; };
-		FAB99C4526F85C670085F0AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C4426F85C670085F0AB /* ViewController.swift */; };
 		FAB99C4826F85C670085F0AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB99C4626F85C670085F0AB /* Main.storyboard */; };
 		FAB99C4A26F85C6D0085F0AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB99C4926F85C6D0085F0AB /* Assets.xcassets */; };
 		FAB99C4D26F85C6D0085F0AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB99C4B26F85C6D0085F0AB /* LaunchScreen.storyboard */; };
+		FAB99C5C26F85CFF0085F0AB /* SQiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C5B26F85CFF0085F0AB /* SQiteDatabase.swift */; };
+		FAB99C5E26F85D0C0085F0AB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C5D26F85D0C0085F0AB /* Model.swift */; };
+		FAB99C6026F85D440085F0AB /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C5F26F85D440085F0AB /* ImagesViewController.swift */; };
+		FAB99C6226F85D520085F0AB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C6126F85D520085F0AB /* DetailsViewController.swift */; };
+		FAB99C6426F85D620085F0AB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C6326F85D620085F0AB /* ViewModel.swift */; };
+		FAB99C6626F85D710085F0AB /* ElementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C6526F85D710085F0AB /* ElementViewModel.swift */; };
+		FAB99C6826F85D850085F0AB /* JsonParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C6726F85D850085F0AB /* JsonParsing.swift */; };
+		FAB99C6A26F85D950085F0AB /* DownloadImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C6926F85D950085F0AB /* DownloadImages.swift */; };
+		FAB99C6C26F85DA40085F0AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C6B26F85DA40085F0AB /* Constants.swift */; };
+		FAB99C6F26F85DC40085F0AB /* PicturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB99C6D26F85DC40085F0AB /* PicturesCollectionViewCell.swift */; };
+		FAB99C7026F85DC40085F0AB /* PicturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB99C6E26F85DC40085F0AB /* PicturesCollectionViewCell.xib */; };
+		FAB99C7526F878CA0085F0AB /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = FAB99C7426F878CA0085F0AB /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAB99C3D26F85C670085F0AB /* CollectionViewAPIwithSQLITEDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewAPIwithSQLITEDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB99C4026F85C670085F0AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB99C4226F85C670085F0AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAB99C4426F85C670085F0AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAB99C4726F85C670085F0AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAB99C4926F85C6D0085F0AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB99C4C26F85C6D0085F0AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB99C4E26F85C6D0085F0AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB99C5B26F85CFF0085F0AB /* SQiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQiteDatabase.swift; sourceTree = "<group>"; };
+		FAB99C5D26F85D0C0085F0AB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FAB99C5F26F85D440085F0AB /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		FAB99C6126F85D520085F0AB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FAB99C6326F85D620085F0AB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		FAB99C6526F85D710085F0AB /* ElementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementViewModel.swift; sourceTree = "<group>"; };
+		FAB99C6726F85D850085F0AB /* JsonParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParsing.swift; sourceTree = "<group>"; };
+		FAB99C6926F85D950085F0AB /* DownloadImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImages.swift; sourceTree = "<group>"; };
+		FAB99C6B26F85DA40085F0AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FAB99C6D26F85DC40085F0AB /* PicturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAB99C6E26F85DC40085F0AB /* PicturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicturesCollectionViewCell.xib; sourceTree = "<group>"; };
+		FAB99C7226F877990085F0AB /* SQLite.swift-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SQLite.swift-master"; path = "../../Downloads/SQLite.swift-master"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB99C7526F878CA0085F0AB /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +65,8 @@
 			children = (
 				FAB99C3F26F85C670085F0AB /* CollectionViewAPIwithSQLITEDatabase */,
 				FAB99C3E26F85C670085F0AB /* Products */,
+				FAB99C7226F877990085F0AB /* SQLite.swift-master */,
+				FAB99C7326F878CA0085F0AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +83,94 @@
 			children = (
 				FAB99C4026F85C670085F0AB /* AppDelegate.swift */,
 				FAB99C4226F85C670085F0AB /* SceneDelegate.swift */,
-				FAB99C4426F85C670085F0AB /* ViewController.swift */,
-				FAB99C4626F85C670085F0AB /* Main.storyboard */,
+				FAB99C5A26F85CC00085F0AB /* SqliteDatabase */,
+				FAB99C5926F85C8D0085F0AB /* Model */,
+				FAB99C5826F85C890085F0AB /* View */,
+				FAB99C5726F85C850085F0AB /* ViewController */,
+				FAB99C5626F85C810085F0AB /* ViewModel */,
+				FAB99C5526F85C7E0085F0AB /* Worker */,
+				FAB99C5426F85C790085F0AB /* Helper */,
 				FAB99C4926F85C6D0085F0AB /* Assets.xcassets */,
 				FAB99C4B26F85C6D0085F0AB /* LaunchScreen.storyboard */,
 				FAB99C4E26F85C6D0085F0AB /* Info.plist */,
 			);
 			path = CollectionViewAPIwithSQLITEDatabase;
+			sourceTree = "<group>";
+		};
+		FAB99C5426F85C790085F0AB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FAB99C6B26F85DA40085F0AB /* Constants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FAB99C5526F85C7E0085F0AB /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				FAB99C6726F85D850085F0AB /* JsonParsing.swift */,
+				FAB99C6926F85D950085F0AB /* DownloadImages.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		FAB99C5626F85C810085F0AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAB99C6326F85D620085F0AB /* ViewModel.swift */,
+				FAB99C6526F85D710085F0AB /* ElementViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAB99C5726F85C850085F0AB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAB99C5F26F85D440085F0AB /* ImagesViewController.swift */,
+				FAB99C6126F85D520085F0AB /* DetailsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FAB99C5826F85C890085F0AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB99C7126F85E0E0085F0AB /* Cell */,
+				FAB99C4626F85C670085F0AB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAB99C5926F85C8D0085F0AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAB99C5D26F85D0C0085F0AB /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAB99C5A26F85CC00085F0AB /* SqliteDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				FAB99C5B26F85CFF0085F0AB /* SQiteDatabase.swift */,
+			);
+			path = SqliteDatabase;
+			sourceTree = "<group>";
+		};
+		FAB99C7126F85E0E0085F0AB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FAB99C6D26F85DC40085F0AB /* PicturesCollectionViewCell.swift */,
+				FAB99C6E26F85DC40085F0AB /* PicturesCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FAB99C7326F878CA0085F0AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +189,9 @@
 			dependencies = (
 			);
 			name = CollectionViewAPIwithSQLITEDatabase;
+			packageProductDependencies = (
+				FAB99C7426F878CA0085F0AB /* SQLite */,
+			);
 			productName = CollectionViewAPIwithSQLITEDatabase;
 			productReference = FAB99C3D26F85C670085F0AB /* CollectionViewAPIwithSQLITEDatabase.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB99C4D26F85C6D0085F0AB /* LaunchScreen.storyboard in Resources */,
+				FAB99C7026F85DC40085F0AB /* PicturesCollectionViewCell.xib in Resources */,
 				FAB99C4A26F85C6D0085F0AB /* Assets.xcassets in Resources */,
 				FAB99C4826F85C670085F0AB /* Main.storyboard in Resources */,
 			);
@@ -137,9 +247,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB99C4526F85C670085F0AB /* ViewController.swift in Sources */,
+				FAB99C6026F85D440085F0AB /* ImagesViewController.swift in Sources */,
+				FAB99C6C26F85DA40085F0AB /* Constants.swift in Sources */,
+				FAB99C6F26F85DC40085F0AB /* PicturesCollectionViewCell.swift in Sources */,
 				FAB99C4126F85C670085F0AB /* AppDelegate.swift in Sources */,
 				FAB99C4326F85C670085F0AB /* SceneDelegate.swift in Sources */,
+				FAB99C6A26F85D950085F0AB /* DownloadImages.swift in Sources */,
+				FAB99C5C26F85CFF0085F0AB /* SQiteDatabase.swift in Sources */,
+				FAB99C5E26F85D0C0085F0AB /* Model.swift in Sources */,
+				FAB99C6226F85D520085F0AB /* DetailsViewController.swift in Sources */,
+				FAB99C6826F85D850085F0AB /* JsonParsing.swift in Sources */,
+				FAB99C6426F85D620085F0AB /* ViewModel.swift in Sources */,
+				FAB99C6626F85D710085F0AB /* ElementViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +458,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAB99C7426F878CA0085F0AB /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAB99C3526F85C670085F0AB /* Project object */;
 }
