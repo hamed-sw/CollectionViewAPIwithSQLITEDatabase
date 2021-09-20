@@ -50,9 +50,7 @@ extension ImagesViewController:UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.PicturesCollectionViewCell, for: indexPath) as? PicturesCollectionViewCell else { fatalError() }
-       // let theurlStirng = viewModel.collectionArry[indexPath.row]
-       // print(viewModel.collectionArry.count)
-       // cell.condfigration(urldata: theurlStirng)
+
         viewModel.dataImage(indext: indexPath.row, images: cell.self)
         
         return cell
