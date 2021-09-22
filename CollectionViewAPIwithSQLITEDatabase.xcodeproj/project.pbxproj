@@ -50,6 +50,7 @@
 		FAB99C7226F877990085F0AB /* SQLite.swift-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SQLite.swift-master"; path = "../../Downloads/SQLite.swift-master"; sourceTree = "<group>"; };
 		FAB99C7626F87B8F0085F0AB /* SqilteConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqilteConnection.swift; sourceTree = "<group>"; };
 		FAB99C7826F88D450085F0AB /* ArrayExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtention.swift; sourceTree = "<group>"; };
+		FAB99C9C26FB2D2C0085F0AB /* SQLite.swift-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SQLite.swift-master"; path = "../../../Downloads/SQLite.swift-master"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 				FAB99C3F26F85C670085F0AB /* CollectionViewAPIwithSQLITEDatabase */,
 				FAB99C3E26F85C670085F0AB /* Products */,
 				FAB99C7226F877990085F0AB /* SQLite.swift-master */,
+				FAB99C9C26FB2D2C0085F0AB /* SQLite.swift-master */,
 				FAB99C7326F878CA0085F0AB /* Frameworks */,
 			);
 			sourceTree = "<group>";

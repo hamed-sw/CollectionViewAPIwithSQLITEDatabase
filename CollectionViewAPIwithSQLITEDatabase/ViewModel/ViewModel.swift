@@ -9,8 +9,16 @@ import UIKit
 
 class ViewModel {
     
+    
     var collectionView: UICollectionView?
     
+    func updatedatabase() {
+        SQLiteDatabase.share.createtables()
+        SqliteStatments.collectionView = self.collectionView
+        SqliteStatments.insertData()
+        print(SqliteStatments.presentRow().count)
+        collectionView?.reloadData()
+    }
     
     func dataImage(indext: Int, images: PicturesCollectionViewCell) {
         let urldata = SqliteStatments.presentRow().object(at: indext)?.url ?? ""
@@ -19,7 +27,6 @@ class ViewModel {
             DispatchQueue.main.async {
                 images.collectionimage.image = imag
             }
-            
         }
     }
     
@@ -32,16 +39,11 @@ class ViewModel {
             DispatchQueue.main.async {
                 dataOf.forImage = imag
             }
-
         }
-        
-        
     }
     
     func totaldataOFDatabase() -> Int? {
         let total = SqliteStatments.presentRow().count
         return total 
     }
-    
-    
 }

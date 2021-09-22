@@ -13,16 +13,12 @@ class ImagesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     lazy var viewModel = ViewModel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
         collectionView.delegate = self
         collectionView.dataSource = self
-      //  updatedatabase()
-        //viewModel.apiCall()
         updatedatabase()
-
     }
     
     func  registerCell() {
@@ -30,17 +26,9 @@ class ImagesViewController: UIViewController {
     }
     
     func updatedatabase() {
-        SQLiteDatabase.share.createtables()
-        SqliteStatments.collectionView = self.collectionView
-        SqliteStatments.insertData()
-        SqliteStatments.presentRow()
-        print(SqliteStatments.presentRow().count)
-        
-        collectionView.reloadData()
-        
+        viewModel.collectionView = self.collectionView
+        viewModel.updatedatabase()
     }
-
-
 }
 
 extension ImagesViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -59,14 +47,10 @@ extension ImagesViewController:UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 200, height: 200)
     }
-    
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             if let details = storyboard?.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController {
                 viewModel.detailData(indext: indexPath.row, dataOf: details.self)
                 self.navigationController?.pushViewController(details, animated: true)
             }
-
         }
-    
-    
 }

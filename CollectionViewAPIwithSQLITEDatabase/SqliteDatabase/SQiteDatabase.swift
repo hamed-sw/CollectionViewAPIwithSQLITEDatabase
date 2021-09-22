@@ -9,17 +9,18 @@ import UIKit
 import SQLite
 
 class SqliteStatments {
-   static var collectionView: UICollectionView?
     
-   static var table = Table("PctureList2")
+    static var collectionView: UICollectionView?
+    /// table name in here.
+    static var table = Table("PctureList2")
     static var isEmpty = false
-   // var presentDataArray =
     
     static var date = Expression<String>("date")
     static var explanation = Expression<String>("explanation")
     static var mediaType = Expression<String>("media")
     static var url = Expression<String>("url")
     
+    /// this fuction createTable  and  it run with conction database .
    static func craeteTable () {
         guard let database = SQLiteDatabase.share.database else {
             print("database connection error")
@@ -41,13 +42,15 @@ class SqliteStatments {
         
     }
     
+    /// this fucntion just insert data from endpoind in to database.
     static func insertData() {
         guard let database = SQLiteDatabase.share.database else {
             print("database connection error")
             return }
+        /// in here if the table is empty  it can stor atherwaise return.
         if presentRow().isEmpty {
             isEmpty = true
-            
+            /// in here we call the parsing to store the data from endpoint into every rows.
             jsonParsing.parsing {  data in
                 switch data {
                 case .success(let arrayData):
@@ -69,7 +72,9 @@ class SqliteStatments {
         }
         
     }
-    
+
+    /// this fuction create for present every row ..
+    /// - Returns: the array for each row
     static func presentRow() -> [Elements] {
         guard let database = SQLiteDatabase.share.database else {
             print("database connection error")

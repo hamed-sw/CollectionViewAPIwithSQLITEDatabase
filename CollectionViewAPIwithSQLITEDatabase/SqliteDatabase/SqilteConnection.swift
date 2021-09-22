@@ -9,6 +9,7 @@ import UIKit
 import SQLite
 
 class SQLiteDatabase {
+    
     static var share = SQLiteDatabase()
     
     var database: Connection?
