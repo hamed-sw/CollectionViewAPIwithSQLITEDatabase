@@ -12,6 +12,7 @@ class ImagesViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     lazy var viewModel = ViewModel()
+    var favorites = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,8 @@ extension ImagesViewController:UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: (view.frame.size.width/2)-4, height: (view.frame.size.width/2)-4)
+            //CGSize(width: 200, height: 200)
     }
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             if let details = storyboard?.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController {
@@ -53,4 +55,48 @@ extension ImagesViewController:UICollectionViewDelegate, UICollectionViewDataSou
                 self.navigationController?.pushViewController(details, animated: true)
             }
         }
+    
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let config = UIContextMenuConfiguration (identifier: nil,
+                                                 previewProvider: nil
+        ) { [weak self] _ in
+            
+            let open = UIAction(title: "Open",
+                                image: UIImage(systemName: "link"),
+                                identifier: nil,
+                                discoverabilityTitle: nil,
+                                state: .off
+            ) { [weak self] _ in
+                print("open tapped")
+            }
+            let favorite = UIAction(title: self?.favorites.contains(indexPath.row) == true ? "Remove Favorite" :"favorite",
+                                image: UIImage(systemName: "star"),
+                                identifier: nil,
+                                discoverabilityTitle: nil,
+                                state: .off
+            ) { [weak self] _ in
+                if self?.favorites.contains(indexPath.row) == true {
+                    self?.favorites.removeAll(where: { $0 == indexPath.row })
+                } else {
+                    self?.favorites.append(indexPath.row)
+                }
+                print("favorite tapped")
+            }
+            let search = UIAction(title: "Search",
+                                image: UIImage(systemName: "mangifyingglass"),
+                                identifier: nil,
+                                discoverabilityTitle: nil,
+                                state: .off
+            ) { [weak self] _ in
+                print("search tapped")
+            }
+            return UIMenu(title: "Action",
+                          image: nil,
+                          identifier: nil,
+                          options: UIMenu.Options.displayInline,
+                          children: [open, favorite, search])
+        }
+        
+        return config
+    }
 }
